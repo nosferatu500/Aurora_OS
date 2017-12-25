@@ -14,7 +14,7 @@ header_start:
     ; insert optional multiboot tags here
 
     ; required end tag
-    dw 0    ; type
-    dw 0    ; flags     ; dw - (16bit)
-    dd 8    ; size      ; dd - (32bit)
+    dw 0    ; type      ; dw - (16bit)
+    dw 0    ; flags     ; dd - (32bit)
+    dd 8    ; size      ; dq - (64bit)
 header_end:
