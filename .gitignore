@@ -1,2 +1,7 @@
-os.iso
+*.iso
+*.o
+*.bin
 /build
+/target
+.idea/
+cmake-build-debug/
