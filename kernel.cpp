@@ -62,7 +62,7 @@ extern "C" void kernelMain(const void* multiboot_structure, uint32_t)
 
     GlobalDescriptorTable gdt;
 
-    InterruptManager interruptManager(&gdt);
+    InterruptManager interruptManager(0x20, &gdt);
 
     interruptManager.Activate();
 
