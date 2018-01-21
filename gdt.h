@@ -1,5 +1,5 @@
-#ifndef __GDT_H
-#define __GDT_H
+#ifndef AURORA_OS_GDT_H
+#define AURORA_OS_GDT_H
 
 #include "types.h"
 
@@ -35,4 +35,4 @@ public:
     uint16_t DataSegmentSelector();
 };
 
-#endif
+#endif //AURORA_OS_GDT_H

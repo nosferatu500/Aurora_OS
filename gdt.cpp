@@ -32,12 +32,16 @@ GlobalDescriptorTable::SegmentDescriptor::SegmentDescriptor(uint32_t base, uint3
 {
     uint8_t* target = (uint8_t*)this;
 
+    // 8192 Descriptors (Maximum)
+    // by 8 byte (for each)
+    //
+    // 8192 x 8 = 65536
     if(limit <= 65536)
     {
-        target[6] = 0x40;
+        target[6] = 0x40; // 16-bit address space
     } else {
-        if((limit & 0xFFF) != 0xFFF) {
-            limit = (limit >> 12) -1;
+        if((limit & 0xFFF) != 0xFFF) { // 32-bit address space
+            limit = (limit >> 12) -1; // 2**12 - 1 = 65535
         } else {
             limit = limit >> 12;
         }

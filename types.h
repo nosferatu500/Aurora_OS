@@ -1,5 +1,5 @@
-#ifndef __TYPES_H
-#define __TYPES_H
+#ifndef AURORA_OS_TYPES_H
+#define AURORA_OS_TYPES_H
 
 typedef char int8_t;
 typedef unsigned char uint8_t;
@@ -14,4 +14,4 @@ typedef unsigned int uint32_t;
 typedef long long int int64_t;
 typedef unsigned long long int uint64_t;
 
-#endif
+#endif //AURORA_OS_TYPES_H
